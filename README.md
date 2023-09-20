@@ -1,2 +1,2 @@
 # ConCal
-A terminal calculator app for the bash shell
+A simple CLI calculator written in bash script
