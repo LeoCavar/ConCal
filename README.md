@@ -1,9 +1,19 @@
 # ConCal
 A simple CLI calculator written in python
 <br>
+## Prerequisite
+Add line to `.bashrc` <br>
+```bash
+alias concal='python3 /path/to/file/calc.py'
+```
 ## Usage
-`./calc <number1> <operator> <number2>`
-<br>
-This code will return <br>
-`Result: <result>`
+```bash
+concal <number1> <operator> <number2>
+```
+
+This code will return:
+```bash
+Result: <resulting number>
+```
+
 
