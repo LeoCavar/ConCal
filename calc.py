@@ -1,8 +1,11 @@
-#!/usr/bin/python3
+#!/usr/bin/env/ python3
 
 import sys
 import decimal
-
+ans=0
+with open("result.txt","r") as r:
+    ans=r.read()
+ans=float(ans)
 def perform_operation(num1, operator, num2):
     try:
         num1 = decimal.Decimal(num1)
@@ -27,6 +30,9 @@ def perform_operation(num1, operator, num2):
         sys.exit(1)
 
     print(f"Rezultat: {result:.4f}")
+    ans=str(result)
+    with open("result.txt","w") as r:
+        r.write(ans)
 
 if len(sys.argv) != 4:
     print("Koristite ovaj skript s tri argumenta u formatu: broj operator broj")
@@ -35,5 +41,9 @@ if len(sys.argv) != 4:
 number_one = sys.argv[1]
 operator = sys.argv[2]
 number_two = sys.argv[3]
-
-perform_operation(number_one, operator, number_two)
+if number_one == "ans":
+    perform_operation(ans, operator, number_two)
+elif number_two=="ans":
+    perform_operation(number_one, operator, ans)
+else:
+    perform_operation(number_one,operator,number_two)
