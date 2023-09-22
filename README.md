@@ -16,4 +16,10 @@ This code will return:
 Result: <resulting number>
 ```
 
-
+Callback to your previous answer using the "ans" variable
+```bash
+concal 1 + 1
+Result: 2
+concal ans + 1
+Result: 3
+```
