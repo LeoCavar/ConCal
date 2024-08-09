@@ -1,5 +1,5 @@
 # ConCal
-A simple CLI calculator written in python
+A simple CLI calculator script written in python
 <br>
 ## Prerequisite
 Add line to `.bashrc` <br>
